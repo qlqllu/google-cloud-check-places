@@ -1,0 +1,28 @@
+{
+  "configurations": [
+    {
+      "name": "debug",
+      "program": "${workspaceFolder}/node_modules/@google-cloud/functions-framework/build/src/main.js",
+      "request": "launch",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "node",
+      "args": [
+        "--target=check-places"
+      ],
+    },
+    {
+      "name": "Deploy Cloud Function",
+      "type": "cloudcode.cloudfunctions",
+      "request": "launch",
+      "functionName": "check-places",
+      "gen": "GEN_2",
+      "revision": "check-places-00001-boc",
+      "entryPoint": "check-places",
+      "testInput": "abc",
+      "region": "asia-east1",
+      "runtime": "nodejs18"
+    }
+  ]
+}
